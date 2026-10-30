@@ -98,7 +98,7 @@
                 <div class="project-body">
                   <div class="project-body-inner">
                     <p>
-                      <span class="lang-zh"><strong class="project-label">实习简介：</strong>参与人形机器人具身智能方向研发，主要负责机器人视觉感知与操作算法的数据、训练与真机验证。</span>
+                      <span class="lang-zh"><strong class="project-label">实习简介：</strong>参与人形机器人具身智能方向研发，主要负责机器人视觉感知与操作算法的数据标注与质检工作。</span>
                       <span class="lang-en"><strong class="project-label">Overview:</strong> Worked on embodied-intelligence R&amp;D for humanoid robots, focusing on visual perception and manipulation algorithms — data, training, and real-robot validation.</span>
                     </p>
                     <p>
@@ -106,8 +106,8 @@
                       <span class="lang-en"><strong class="project-label">Main Work:</strong></span>
                     </p>
                     <ul class="lang-zh">
-                      <li>搭建<strong class="hl">视觉感知与数据采集</strong>流程：相机/手眼标定、遥操作示范数据采集与清洗，形成可复用的训练数据管线；</li>
-                      <li>参与<strong class="hl">VLA / 模仿学习模型</strong>的训练与评测，迭代数据配比与超参，提升抓取与操作任务成功率；</li>
+                      <li>基于 Python 构建<strong class="hl"> Ego 数据标注质检规则</strong>，共制定 <strong class="hl">12 条质检条件</strong>，包含手部轨迹跳变、手部塌缩、覆盖窗口低、深度跳变等，覆盖 3D 手部位姿与轨迹、SLAM 位姿与跟踪、坐标系及标注格式校验，并接入质检平台；</li>
+                      <li>基于 Go、TypeScript 搭建 <strong class="hl">Ego 标注质检平台</strong>，打通视频源目录预检、HandPose/相机结果检查、风险复核、随机抽检与扩查、版本冲突处理及冻结交付闭环；支持按左右手及局部、相机、世界坐标独立维护质检范围，联动视频帧、2D 关键点、3D 骨架、相机位姿与轨迹进行复核，并通过 PostgreSQL/SQLite 账本、Parquet 数据包和 SHA-256 指纹保留可追溯质检证据；</li>
                       <li>在<strong class="hl">真机</strong>上完成算法部署与验证，定位并修复感知—控制链路问题。</li>
                     </ul>
                     <ul class="lang-en">
