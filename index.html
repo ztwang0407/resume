@@ -98,8 +98,8 @@
                 <div class="project-body">
                   <div class="project-body-inner">
                     <p>
-                      <span class="lang-zh"><strong class="project-label">实习简介：</strong>参与人形机器人具身智能方向研发，主要负责机器人视觉感知与操作算法的数据标注与质检工作。</span>
-                      <span class="lang-en"><strong class="project-label">Overview:</strong> Worked on embodied-intelligence R&amp;D for humanoid robots, focusing on visual perception and manipulation algorithms — data, training, and real-robot validation.</span>
+                      <span class="lang-zh"><strong class="project-label">实习简介：</strong>参与人形机器人具身智能方向研发，主要负责机器人视觉感知与操作算法的数据标注管线搭建与数据质检平台搭建工作。</span>
+                      <span class="lang-en"><strong class="project-label">Overview:</strong> Participated in R&amp;D for embodied intelligence in humanoid robots, primarily focusing on building data annotation pipelines and data quality inspection platforms for robot visual perception and manipulation algorithms.</span>
                     </p>
                     <p>
                       <span class="lang-zh"><strong class="project-label">主要工作：</strong></span>
@@ -111,8 +111,8 @@
                       <li>在<strong class="hl">真机</strong>上完成算法部署与验证，定位并修复感知—控制链路问题。</li>
                     </ul>
                     <ul class="lang-en">
-                      <li>Built the <strong class="hl">visual perception and data-collection</strong> pipeline: camera/eye-to-hand calibration, teleoperation demonstration data collection and cleaning for reusable training sets;</li>
-                      <li>Trained and evaluated <strong class="hl">VLA / imitation-learning</strong> models, iterating on data mixing and hyperparameters to improve grasping and manipulation success rates;</li>
+                      <li>We developed <strong class="hl">a set of 12 quality inspection rules</strong> for <strong class="hl">"ego" (first-person) data annotations</strong> using Python. These rules—which include checks for issues such as abrupt jumps in hand trajectories, hand-model collapse, insufficient window coverage, and sudden depth discontinuities—cover 3D hand pose and trajectory data, SLAM poses and tracking, coordinate systems, and annotation format validation. The rules have been integrated into our quality inspection platform;</li>
+                      <li>Built on Go and TypeScript, the <strong class="hl">Ego Annotation Quality Assurance (QA) Platform</strong> establishes an end-to-end workflow covering pre-inspection of video source directories, verification of HandPose and camera-based outputs, risk-based re-evaluation, random sampling and expanded audits, as well as version conflict resolution and final delivery freezing. The platform supports independent QA scope management—categorized by left/right hand (or specific body parts), camera, and world coordinates—and enables integrated reviews across video frames, 2D keypoints, 3D skeletons, and camera poses/trajectories. Traceable QA evidence is maintained through PostgreSQL/SQLite audit logs, Parquet data packages, and SHA-256 digital fingerprints;</li>
                       <li>Deployed and validated algorithms on the <strong class="hl">real robot</strong>, diagnosing issues across the perception–control loop.</li>
                     </ul>
                   </div>
