@@ -107,13 +107,13 @@
                     </p>
                     <ul class="lang-zh">
                       <li>基于 Python 构建<strong class="hl"> Ego 数据标注质检规则</strong>，共制定 <strong class="hl">12 条质检条件</strong>，包含手部轨迹跳变、手部塌缩、覆盖窗口低、深度跳变等，覆盖 3D 手部位姿与轨迹、SLAM 位姿与跟踪、坐标系及标注格式校验，并接入质检平台；</li>
-                      <li>基于 Go、TypeScript 搭建 <strong class="hl">Ego 标注质检平台</strong>，打通视频源目录预检、HandPose/相机结果检查、风险复核、随机抽检与扩查、版本冲突处理及冻结交付闭环；支持按左右手及局部、相机、世界坐标独立维护质检范围，联动视频帧、2D 关键点、3D 骨架、相机位姿与轨迹进行复核，并通过 PostgreSQL/SQLite 账本、Parquet 数据包和 SHA-256 指纹保留可追溯质检证据；</li>
-                      <li>在<strong class="hl">真机</strong>上完成算法部署与验证，定位并修复感知—控制链路问题。</li>
+                      <li>基于 Go、TypeScript 搭建 <strong class="hl">Ego 标注质检平台</strong>，打通<strong class="hl">视频源目录预检、HandPose/相机结果检查、风险复核、随机抽检与扩查、版本冲突处理及冻结交付闭环</strong>；支持按左右手及局部、相机、世界坐标独立维护质检范围，联动<strong class="hl">视频帧、2D 关键点、3D 骨架、相机位姿与轨迹</strong>进行复核，并通过 PostgreSQL/SQLite 账本、Parquet 数据包和 SHA-256 指纹保留可追溯质检证据；</li>
+                      <li>构建<strong class="hl">面向 GR00T 的多机器人 LeRobot v2.1 数据流水线</strong>，完成 <strong class="hl">9D EEF 动作统一、URDF/FK 坐标标定、state-action 时序对齐及视频质检</strong>，并通过可审计的 clean export 生成训练集；<strong class="hl">将 Motus 接入 RoboTwin 2.0 多 GPU rollout</strong>，打通 qpos、Aloha/delta 与 critic 归一化动作链路，验证梯度和执行协议，<strong class="hl">覆盖 50 个任务，审计 1,146 条轨迹，结构与协议异常为 0。</strong></li>
                     </ul>
                     <ul class="lang-en">
                       <li>We developed <strong class="hl">a set of 12 quality inspection rules</strong> for <strong class="hl">"ego" (first-person) data annotations</strong> using Python. These rules—which include checks for issues such as abrupt jumps in hand trajectories, hand-model collapse, insufficient window coverage, and sudden depth discontinuities—cover 3D hand pose and trajectory data, SLAM poses and tracking, coordinate systems, and annotation format validation. The rules have been integrated into our quality inspection platform;</li>
                       <li>Built on Go and TypeScript, the <strong class="hl">Ego Annotation Quality Assurance (QA) Platform</strong> establishes an end-to-end workflow covering pre-inspection of video source directories, verification of HandPose and camera-based outputs, risk-based re-evaluation, random sampling and expanded audits, as well as version conflict resolution and final delivery freezing. The platform supports independent QA scope management—categorized by left/right hand (or specific body parts), camera, and world coordinates—and enables integrated reviews across video frames, 2D keypoints, 3D skeletons, and camera poses/trajectories. Traceable QA evidence is maintained through PostgreSQL/SQLite audit logs, Parquet data packages, and SHA-256 digital fingerprints;</li>
-                      <li>Deployed and validated algorithms on the <strong class="hl">real robot</strong>, diagnosing issues across the perception–control loop.</li>
+                      <li>Developed <strong class="hl">a multi-robot data synchronization pipeline (LeRobot v2.1) for GR00T</strong>, encompassing <strong class="hl">the unification of 9D end-effector (EEF) actions, URDF/forward kinematics (FK) coordinate calibration, and quality assessment of state-action perspectives and video data</strong>; generated a training dataset through a clean, auditable export process. <strong class="hl">Integrated Motus into the RoboTwin 2.0 multi-GPU deployment framework</strong>, establishing seamless data pipelines for qpos, Aloha/delta, and critic normalization; validated gradient computation and execution protocols. The implementation <strong class="hl">covers 50 distinct tasks, with 1,146 reports audited and zero structural or protocol-related anomalies detected.</strong></li>
                     </ul>
                   </div>
                 </div>
@@ -200,15 +200,13 @@
               <span>Natural Language Processing</span>
               <span class="highlight">Deep Reinforcement Learning</span>
               <span class="highlight">Imitation Learning</span>
-              <span>Graph Neural Networks</span>
               <span class="highlight">Large Language Model</span>
               <span>Model Compression</span>
-              <span>Convex Optimization</span>
-              <span>Probabilistic Graph Model</span>
               <span>Meta Learning</span>
-              <span class="highlight">Deep Generative Model</span>
               <span class="highlight">VLA</span>
               <span class="highlight">WAM</span>
+              <span class="highlight">Camera Calibration</span>
+              <span class="highlight">SLAM</span>
             </div>
           </section>
 
